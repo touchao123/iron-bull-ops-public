@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>铁牛军团周报 — 2026-05-24</title>
+<style>
+@page { margin: 20mm 15mm; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: #1C2D3A;
+  background: #FFFFFF;
+  line-height: 1.7;
+  padding: 30px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1 { font-size: 26px; color: #1B2838; border-bottom: 3px solid #2C3E50; padding-bottom: 10px; margin-bottom: 12px; }
+h2 { font-size: 20px; color: #2C3E50; margin: 28px 0 12px; border-left: 4px solid #2C3E50; padding-left: 12px; }
+h3 { font-size: 16px; color: #566573; margin: 18px 0 8px; }
+.meta { color: #5D6D7E; font-size: 13px; margin-bottom: 24px; padding: 10px 16px; background: #F8F9FA; border-radius: 8px; border: 1px solid #E8ECF0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 14px; }
+th { background: #1B2838; color: #F8F9FA; padding: 8px 12px; text-align: left; font-weight: 600; }
+td { padding: 7px 12px; border-bottom: 1px solid #E8ECF0; vertical-align: top; }
+tr:nth-child(even) td { background: #F5F6F8; }
+.status-ok { color: #1E5A8A; font-weight: 600; }
+.status-wip { color: #F57F17; font-weight: 600; }
+.status-new { color: #1E5A8A; font-weight: 600; }
+.status-blocked { color: #A04040; font-weight: 600; }
+.status-pending { color: #6A1B9A; font-weight: 600; }
+.section-label { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-right: 4px; }
+.label-done { background: #E8F0FE; color: #1E5A8A; }
+.label-wip { background: #FEF3E8; color: #B7581F; }
+.label-new { background: #E8F0FE; color: #1E5A8A; }
+.label-blocked { background: #FDE8E8; color: #A04040; }
+.footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid #D5D8DC; font-size: 12px; color: #7F8C8D; text-align: center; }
+.board-line { font-family: monospace; font-size: 14px; padding: 10px 14px; background: #1C2D3A; color: #AAB7C4; border-radius: 6px; margin: 12px 0; }
+ul { padding-left: 20px; margin: 6px 0 12px; }
+li { margin: 4px 0; font-size: 14px; }
+.risk-table td:first-child { font-weight: 600; white-space: nowrap; }
+blockquote { padding: 8px 14px; background: #F8F9FA; border-left: 4px solid #2C3E50; margin: 10px 0; font-size: 14px; color: #566573; }
+@media print { body { padding: 0; } .page-break { page-break-before: always; } }
+</style>
+</head>
+<body>
+
+<h1>🐂 铁牛军团周报 — 2026-05-18 ~ 2026-05-24</h1>
+
+<div class="meta">
+  <strong>周期：</strong>第21周 |
+  <strong>日期：</strong>2026-05-18（周一）→ 2026-05-24（周日）<br>
+  <strong>生成时间：</strong>2026-05-24 04:00 UTC
+</div>
+
+<h2>🏆 本周关键产出</h2>
+
+<table>
+  <tr><th>维度</th><th style="text-align:center">数字</th></tr>
+  <tr><td>✅ 本周完成 Issue</td><td style="text-align:center"><strong>59 项</strong></td></tr>
+  <tr><td>🆕 本周新建 Issue</td><td style="text-align:center"><strong>100 项</strong></td></tr>
+  <tr><td>🚧 当前在途</td><td style="text-align:center"><strong>4 项</strong></td></tr>
+  <tr><td>📋 待排期（Backlog）</td><td style="text-align:center"><strong>21 项</strong></td></tr>
+  <tr><td>⏳ 待前置条件（Pending）</td><td style="text-align:center"><strong>2 项</strong></td></tr>
+  <tr><td>🎯 待分配（To Do）</td><td style="text-align:center"><strong>14 项</strong></td></tr>
+  <tr><td>🏁 历史累计完成</td><td style="text-align:center"><strong>59 项</strong></td></tr>
+</table>
+
+<h2>🚗 项目一：智能座舱</h2>
+
+<p><strong>本周军团全面转向座舱实战，铁牛二号专攻 SOME/IP 链路</strong></p>
+
+<table>
+  <tr><th style="width:60px">状态</th><th>内容</th></tr>
+  <tr><td><span class="label-done">✅</span></td><td>虚拟仪表盘 UI 原型（速度表/转速表/油温）交付（#75）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>Dear ImGui 桌面上位机研发完成（#61）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>上位机目标机器部署验证通过（#62）— 铁牛二号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>中文显示 Bug 修复（#64）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>eth-soa-rel 仓库迁移到本机 Gitea（#85）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>车端日历提醒功能完成（#9）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>Cockpit Agent Skill 设计稿（#4）</td></tr>
+  <tr><td><span class="label-wip">🚧</span></td><td>Raw Packet 面板开发中（#65）— 铁牛二号推进中</td></tr>
+  <tr><td><span class="label-wip">🚧</span></td><td>天枢分布式手机自动化系统（#90）— 铁牛一号调研</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>rpi3b vsomeip 交叉编译/安装环境搭建（#89）— 🎯 铁牛二号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>车窗 SOME/IP 信号定义确认（#88）— 🎯 铁牛二号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>vehicletoolkit 车窗端到端控制（#87）— 🎯 铁牛二号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>eth-soa-rel 实现 vehicletoolkit 研究（#86）— 🎯 铁牛二号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>rpi3b 档位 SOME/IP 读取 Phase 1-1（#74）— 🎯 铁牛二号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>虚拟座舱 Web 驾驶室（#73）— 📋 待排期</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>持续推理 Agent 技术分析（#53）— 📋 待排期</td></tr>
+</table>
+
+<p><strong>下步重点：</strong>Raw Packet 面板交付 → rpi3b vsomeip 环境搭建 → 车窗控制端到端闭环</p>
+
+<h2>🐮 项目二：基础设施与军团建设</h2>
+
+<p><strong>本周军团建制成型，全面转入共享文件体系与知识管理标准化</strong></p>
+
+<table>
+  <tr><th style="width:60px">状态</th><th>内容</th></tr>
+  <tr><td><span class="label-done">✅</span></td><td>rpi4B+ #1 全流程部署（#8→#12→#13→#14→#15）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>铁牛二号正式接入军团（#16）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>飞书知识库搭建全链路打通（#32→#34→#41）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>CI/CD 指挥体系双 Pilot 验证（#23 showmydisk, #25 DriveScope）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>system-setup 交互式安装向导重构（#39）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>tmux-config 整合 showmydisk（#37）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>showmydisk bug 修复（#40）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>日报/周报/月报机制落地（#42）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>Board 新增 ⏳ Pending 泳道（#56）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>report-* 标签体系（#63）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>飞书 open_id 身份识别机制（#47）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>铁鸽推送能力调研（#46）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>Wiki 标签管理 + 嘟嘟身份更新（#52）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>会话安全隔离配置（#91）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>设备账本上线（#92）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>身份映射表 V2（#93）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>共享凭证仓库 CREDENTIALS.md（#95）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>团队公约 CONVENTIONS.md（#96）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>议题同步机制 PoT 通过（#98）— 本机→OmniGrid-hw</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>客户账本 CUSTOMERS.md（#99）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>基础设施清单 INFRA.md（#104）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>飞书表格 API 读取验证（#103）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>飞书 Drive + Excel 解析验证（#105）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>LLM 直接读表格出结论（#106）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>图表产出能力验证（#107）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>数据分析工作流闭环（#108）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>GitHub→Gitea 仓库镜像（#76→#77）— 铁牛二号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>国内加速方案调研（#67）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>军事热点日报系统（#69）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>季节性消费推荐 App POC（#60）— 铁牛一号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>虚拟宠物小屋 PWA（#57）— 铁牛二号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>聚餐邀请入口方案（#80）— 铁牛二号</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>接口映射调研（#70）</td></tr>
+  <tr><td><span class="label-done">✅</span></td><td>全球热点每日精读（#69）</td></tr>
+</table>
+
+<h3>🆕 本周新建排期中基建</h3>
+
+<ul>
+  <li>跨 Agent 通信可靠性改进（#24）— 📋</li>
+  <li>军团配置导入/导出模板（#18）— 🎯</li>
+  <li>新机器软件预置（#36）— 🎯</li>
+  <li>EC2 hyperpath server 部署（#35）— 🎯</li>
+  <li>AWS 迁移评估（#68）— 🎯</li>
+  <li>知识库 Wiki 迁移到 rpi4B+（#71）— 🎯</li>
+  <li>macOS 备忘录导入（#38）— 📋</li>
+  <li>Outline 调研部署（#33）— 📋</li>
+  <li>邮件推送备选通道（#48）— ⏳</li>
+  <li>飞书群聊 @角色 路由（#49）— ⏳</li>
+  <li>Session 上下文管理（#84）— 📋</li>
+  <li>需求挖掘指南（#83）— 📋</li>
+  <li>fireworks-tech-graph 调研（#101）— 📋</li>
+  <li>市场数据分析通路（#102）— 📋</li>
+  <li>OmniGrid 卖点更新（#94）— 🚧</li>
+</ul>
+
+<h2>📱 项目三：电商与研究</h2>
+
+<table>
+  <tr><th style="width:60px">状态</th><th>内容</th></tr>
+  <tr><td><span class="label-done">✅</span></td><td>季节性消费推荐 App POC 原型（#60）— 铁牛一号</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>巴西 TikTok 电商调研（#51）— 📋</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>自媒体带货视频工具调研（#17）— 📋</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>季节性消费 App 调研（#59）— 📋</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>人才情报分析（#81）— 📋</td></tr>
+  <tr><td><span class="label-wip">🚧</span></td><td>京东 SSD 价格抓取（#20）</td></tr>
+</table>
+
+<h2>🎮 项目四：其他</h2>
+
+<table>
+  <tr><th style="width:60px">状态</th><th>内容</th></tr>
+  <tr><td><span class="label-done">✅</span></td><td>POC 虚拟宠物小屋 PWA（#57）— 铁牛二号，女儿项目先行</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>女儿暑假计划（#55）— 📋</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>QQ音乐歌单迁移（#26）— 📋</td></tr>
+  <tr><td><span class="label-new">🆕</span></td><td>聚餐安排助手（#27）— 📋</td></tr>
+  <tr><td><span class="label-wip">🚧</span></td><td>OmniGrid 哈佛商学院项目（#94）</td></tr>
+</table>
+
+<h2>⚠️ 风险与关注</h2>
+
+<table class="risk-table">
+  <tr><th style="width:140px">风险</th><th>说明</th><th style="width:80px">状态</th></tr>
+  <tr><td>跨 Agent 通信</td><td>sessions_send 上下文裁剪问题待研究（#24）</td><td>🟡 调研中</td></tr>
+  <tr><td>铁鸽推送受限</td><td>tiege Bot 无法主动弹出飞书通知</td><td>🟡 邮件备选（#48）</td></tr>
+  <tr><td>飞书群聊路由</td><td>多 Bot 群内 @路由 依赖底层消息路由先落地（#49）</td><td>⏳ 等待中</td></tr>
+  <tr><td>EC2 部署</td><td>hyperpath server（#35）等待 AWS 账号权限确认</td><td>🟡 待确认</td></tr>
+  <tr><td>Board 卡片膨胀</td><td>✅ Done 已达 59 项（比上周 +24）</td><td>🟢 正常</td></tr>
+  <tr><td>铁牛二号座舱链路</td><td>车窗控制端到端涉及 rpi3b vsomeip + eth-soa-rel 多环节</td><td>🟡 链路长</td></tr>
+</table>
+
+<h2>📋 看板状态快照</h2>
+
+<div class="board-line">📋 Backlog (21) → ⏳ Pending (2) → 🎯 To Do (14) → 🚧 In Progress (4) → ✅ Done (59)</div>
+
+<h3>🚧 In Progress 当前进行中</h3>
+<ul>
+  <li>#65 Raw Packet 面板 — 铁牛二号</li>
+  <li>#90 天枢分布式手机自动化 — 铁牛一号</li>
+  <li>#94 OmniGrid 卖点更新 — 🐦 铁鸽</li>
+  <li>#20 京东 SSD 价格抓取 — 待认领</li>
+</ul>
+
+<div class="footer">
+  🐂 铁牛军团 · 自动生成<br>
+  数据来源：GitHub Issues + Project Board
+</div>
+
+</body>
+</html>
