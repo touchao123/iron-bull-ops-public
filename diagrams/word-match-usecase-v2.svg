@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="920" height="620">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="460" y="40" text-anchor="middle" class="title">🎯 单词消消乐 — Use Case 图</text>
+  <text x="460" y="62" text-anchor="middle" class="small">女儿自己动手做的单词配对游戏</text>
+
+  <!-- System Boundary -->
+  <rect x="260" y="80" width="620" height="510" rx="12" class="zone" />
+  <text x="280" y="105" class="label" fill="#64748b" font-size="13">单词消消乐 App</text>
+
+  <!-- Connectors (drawn before nodes so they sit behind) -->
+  <!-- 打开 App -->
+  <path d="M 120,300 L 340,155" class="edge" marker-end="url(#arrow)"/>
+  <!-- 点击卡片 -->
+  <path d="M 120,300 L 340,230" class="edge" marker-end="url(#arrow)"/>
+  <!-- 浏览词库 -->
+  <path d="M 120,300 L 580,230" class="edge" marker-end="url(#arrow)"/>
+  <!-- 查看进度 -->
+  <path d="M 120,300 L 340,305" class="edge" marker-end="url(#arrow)"/>
+  <!-- 选择难度 -->
+  <path d="M 120,300 L 580,305" class="edge" marker-end="url(#arrow)"/>
+  <!-- 点发音 -->
+  <path d="M 120,300 L 340,380" class="edge" marker-end="url(#arrow)"/>
+  <!-- 闯关 -->
+  <path d="M 120,300 L 580,380" class="edge" marker-end="url(#arrow)"/>
+  <!-- 买装饰 -->
+  <path d="M 120,300 L 460,455" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- Actor: 女儿 -->
+  <rect x="40" y="260" width="80" height="80" rx="40" class="node input" />
+  <text x="80" y="295" text-anchor="middle" class="label">👧</text>
+  <text x="80" y="315" text-anchor="middle" class="small">玩家</text>
+
+  <!-- Use Cases -->
+  <rect x="280" y="130" width="200" height="50" rx="10" class="node process" />
+  <text x="380" y="160" text-anchor="middle" class="label">开始游戏</text>
+
+  <rect x="280" y="205" width="200" height="50" rx="10" class="node neutral" />
+  <text x="380" y="235" text-anchor="middle" class="label">翻转卡片配对</text>
+
+  <rect x="520" y="205" width="200" height="50" rx="10" class="node neutral" />
+  <text x="620" y="235" text-anchor="middle" class="label">学习单词</text>
+
+  <rect x="280" y="280" width="200" height="50" rx="10" class="node storage" />
+  <text x="380" y="310" text-anchor="middle" class="label">查看闯关进度</text>
+
+  <rect x="520" y="280" width="200" height="50" rx="10" class="node input" />
+  <text x="620" y="310" text-anchor="middle" class="label">选择难度/单元</text>
+
+  <rect x="280" y="355" width="200" height="50" rx="10" class="node external" />
+  <text x="380" y="385" text-anchor="middle" class="label">听发音（朗读）</text>
+
+  <rect x="520" y="355" width="200" height="50" rx="10" class="node storage" />
+  <text x="620" y="385" text-anchor="middle" class="label">赚星星⭐攒金币</text>
+
+  <rect x="400" y="430" width="200" height="50" rx="10" class="node risk" />
+  <text x="500" y="460" text-anchor="middle" class="label">装饰收集</text>
+
+  <!-- Legend -->
+  <rect x="40" y="480" width="180" height="100" rx="8" class="zone" stroke-width="0.5" />
+  <text x="60" y="503" class="small" font-weight="650">图例</text>
+  <rect x="60" y="512" width="14" height="14" rx="3" class="input" stroke="#64748b" stroke-width="0.5"/>
+  <text x="82" y="524" class="small">入口/选择</text>
+  <rect x="60" y="532" width="14" height="14" rx="3" class="process" stroke="#64748b" stroke-width="0.5"/>
+  <text x="82" y="544" class="small">核心操作</text>
+  <rect x="60" y="552" width="14" height="14" rx="3" class="storage" stroke="#64748b" stroke-width="0.5"/>
+  <text x="82" y="564" class="small">数据/进度</text>
+</svg>
